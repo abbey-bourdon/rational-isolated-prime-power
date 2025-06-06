@@ -1,6 +1,7 @@
 // This is an abbreviated version of the algorithm used in "Towards a classification of isolated j-invariants"
 // by Abbey Bourdon, Sachi Hashimoto, Timo Keller, Zev Klagsbrun David Lowry-Duda, Travis Morrison, Filip Najman, Himanshu Shukla.
-// https://github.com/davidlowryduda/isolated_points/blob/master/isolatedpoints.m
+// Article availalbe at https://arxiv.org/abs/2311.07740. Original algorithm available at
+// https://github.com/davidlowryduda/isolated_points/blob/master/isolatedpoints.m.
 
 intrinsic TransposeMatrixGroup(G::GrpMat) -> GrpMat
     {Return the transpose of G}
