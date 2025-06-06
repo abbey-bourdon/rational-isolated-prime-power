@@ -1,0 +1,91 @@
+GL49:=GeneralLinearGroup(2,Integers(49));                                                                                                       
+H49:=sub<GL49|[[20,46],[25,21]],[[40,36],[44,2]]>; //This is 49.196.9.1.
+
+Sub7:=Subgroups(H49:IndexEqual:=7);
+Det:={Determinant(i):i in Sub7[1]`subgroup};
+#Det; // This group does not have surjective determinant, so it cannot be the mod 49 image.
+
+Sub49:=Subgroups(H49:IndexEqual:=49);
+Det:={Determinant(i):i in Sub49[1]`subgroup};
+#Det; //This shows the determinant is surjective.
+
+H_pot:=Sub49[1]`subgroup;
+Ns49:=Normalizer(GL49, sub<GL49 | [47,0,0,1],[1,0,0,47]>); //This is the normalizer of a split Cartan subgroup mod 49.
+
+Ns49_sub:=Subgroups(Ns49: IndexEqual:=7);
+IsConjugate(GL49, Ns49_sub[1]`subgroup, H_pot);//false
+IsConjugate(GL49, Ns49_sub[2]`subgroup, H_pot);
+//This says our index 49 subgroup is conjugate to a subgroup of the normalizer of a split cartan mod 49.
+
+
+function ChangeLevel(G,n) //This is a function of Harris Daniels, I think.
+I := BaseRing(G);
+if #I ge n then
+H := ChangeRing(G,Integers(n));
+end if;
+if not #I ge n then
+GL2n := GL(2,Integers(n));
+ _,pi  := ChangeRing(GL(2,Integers(n)),I);
+ H := sub<GL2n | Inverse(pi)(G),Kernel(pi) >;
+ end if;
+return H;
+end function;
+
+H343:=ChangeLevel(H49,343);                                                                                                                                               
+Sub:=Subgroups(H343:IndexEqual:=7);      
+#Sub;
+Det:={Determinant(i):i in Sub[1]`subgroup};
+#Det; //This group does not have surjective determinant, so it cannot be the mod 343 image.
+
+Sub:=Subgroups(H343:IndexEqual:=49);
+#Sub;
+
+Det:={Determinant(i):i in Sub[1]`subgroup};
+#Det; //This group does not have surjective determinant, so it cannot be the mod 343 image.
+
+Det:={Determinant(i):i in Sub[2]`subgroup};
+#Det;
+H_pot_2:=Sub[2]`subgroup;
+Hred:=ChangeRing(H_pot_2,Integers(49));
+#Hred; // This shows H_pot_2 does not reduce to 49.196.9.1, which is a contradiction.
+
+
+Sub:=Subgroups(H343:IndexEqual:=343);
+#Sub;
+
+Det:={Determinant(i):i in Sub[1]`subgroup};
+#Det; //This group does not have surjective determinant, so it cannot be the mod 343 image.
+
+Det:={Determinant(i):i in Sub[2]`subgroup};
+#Det; 
+
+H_pot_2:=Sub[2]`subgroup;
+Hred:=ChangeRing(H_pot_2,Integers(49));
+#Hred;  // This shows H_pot_2 does not reduce to 49.196.9.1, which is a contradiction.
+
+
+Sub:=Subgroups(H343:IndexEqual:=2401);
+
+Det:={Determinant(i):i in Sub[1]`subgroup}; 
+#Det;
+
+Det:={Determinant(i):i in Sub[2]`subgroup}; 
+#Det;                                      
+
+Det:={Determinant(i):i in Sub[3]`subgroup}; 
+#Det;                                      
+
+H_pot_2:=Sub[3]`subgroup;
+Hred:=ChangeRing(H_pot_2,Integers(49));
+#Hred; // This shows H_pot_2 does not reduce to 49.196.9.1, which is a contradiction.
+
+Attach("isolated_points_from_image_Gamma1.m");
+Attach("gl2.m");
+CheckIsolatedGamma1(H49); // The output shows there are no isolated points on X_1(7^n) associated to elliptic curves with this image.
+
+Attach("isolated_points_from_image_Gamma0.m");
+CheckIsolatedGamma0(H49); // The output shows there are no isolated points on X_0(7^n) associated to elliptic curves with this image.
+
+
+
+
