@@ -17,8 +17,10 @@ IsConjugate(GL49, Ns49_sub[1]`subgroup, H_pot);//false
 IsConjugate(GL49, Ns49_sub[2]`subgroup, H_pot);
 //This says our index 49 subgroup is conjugate to a subgroup of the normalizer of a split cartan mod 49.
 
+//This next function is from Daniels & Gonzalez-Jimenez, as used in "On the torsion of rational elliptic curves over sextic fields". 
+//See https://arxiv.org/abs/1808.02887 for the paper and http://verso.mat.uam.es/~enrique.gonzalez.jimenez/research/tables/tors6/RZB_Search.txt for the code.
 
-function ChangeLevel(G,n) //This is a function of Harris Daniels, I think.
+function ChangeLevel(G,n) 
 I := BaseRing(G);
 if #I ge n then
 H := ChangeRing(G,Integers(n));
