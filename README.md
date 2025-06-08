@@ -1,6 +1,6 @@
 This repository contains code and data associated to the paper "Rational isolated j-invariants from $X_1(\ell^n)$ and $X_0(\ell^n)$" by Abbey Bourdon and Özlem Ejder (2025).
 
-Our code requires the gl2.m file associated to the paper "l-adic images of Galois for elliptic curves over $\mathbb{Q}$" by Jeremy Rouse, Andrew V. Sutherland, and David Zureick-Brown, arXiv:2106.11141 (2021). This can be found at https://github.com/AndrewVSutherland/ell-adic-galois-images/blob/main/groups/gl2.m. We make remarks on the other files in this repository below:
+Our code requires the gl2.m file associated to the paper [*l-adic images of Galois for elliptic curves over Q*](https://arxiv.org/abs/2106.11141) by Jeremy Rouse, Andrew V. Sutherland, and David Zureick-Brown (Forum Math. Sigma, 2022). This can be found at https://github.com/AndrewVSutherland/ell-adic-galois-images/blob/main/groups/gl2.m. We make remarks on the other files in this repository below:
 
 - The file `isolated_points_from_imaga_Gamma1.m` is an abbreviated version of the algorithm of Abbey Bourdon, Sachi Hashimoto, Timo Keller, Zev Klagsbrun David Lowry-Duda, Travis Morrison, Filip Najman, Himanshu Shukla. The original article is availalbe at https://arxiv.org/abs/2311.07740. The original algorithm is available at https://github.com/davidlowryduda/isolated_points/blob/master/isolatedpoints.m.
 
