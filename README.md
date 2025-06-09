@@ -16,4 +16,4 @@ Our code requires the `gl2.m` file associated to the paper [*l-adic images of Ga
 
 - `Gamma0results.out` gives the output from running `isolated_points_from_image_Gamma0.m` on all images in `elladicgens.txt`.
 
-- `Image49.196.9.1.txt` includes all computations used in the proof of Corollary 3. It employs a "ChangeLevel" function, as appearing in [*On the torsion of rational elliptic curves over sextic fields*](https://arxiv.org/abs/1808.02887) by Harris Daniels and Enrique González-Jiménez (Math. Comp., 2020). The paper is available at  for the paper and the code is available [here](http://verso.mat.uam.es/~enrique.gonzalez.jimenez/research/tables/tors6/RZB_Search.txt).
+- `Image49.196.9.1.txt` includes all computations used in the proof of Corollary 3. It employs a "ChangeLevel" function, as appearing in [*On the torsion of rational elliptic curves over sextic fields*](https://arxiv.org/abs/1808.02887) by Harris Daniels and Enrique González-Jiménez (Math. Comp., 2020). The code is available [here](http://verso.mat.uam.es/~enrique.gonzalez.jimenez/research/tables/tors6/RZB_Search.txt).
