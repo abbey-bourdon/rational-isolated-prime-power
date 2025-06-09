@@ -6,7 +6,7 @@ Our code requires the `gl2.m` file associated to the paper [*l-adic images of Ga
 
 - `isolated_points_from_image_Gamma0.m` is an abbreviated version of the algorithm of Meghan Lee, as in her MS thesis [*Isolated j-invariants arising from the modular curve X_0(N)*](https://users.wfu.edu/bourdoam/MeghanLeeThesis.pdf). The original algorithm is available [here](https://github.com/meghanhlee/NonIsolated).
 
-- `elladicgens.txt` contains all known ell-adic images of Galois for non-CM elliptic curves over $\mathbb{Q}$, as classified in [*Elliptic curves over Q and 2-adic images of Galois*](https://arxiv.org/abs/1402.5997) by Jeremy Rouse and David Zureick-Brown (Res. Number Theory, 2015) and in [*l-adic images of Galois for elliptic curves over Q*](https://arxiv.org/abs/2106.11141) Jeremy Rouse, Andrew V. Sutherland, and David Zureick-Brown  (Forum Math. Sigma, 2022).
+- `elladicgens.txt` contains all known $\ell$-adic images of Galois for non-CM elliptic curves over $\mathbb{Q}$, as classified in [*Elliptic curves over Q and 2-adic images of Galois*](https://arxiv.org/abs/1402.5997) by Jeremy Rouse and David Zureick-Brown (Res. Number Theory, 2015) and in [*l-adic images of Galois for elliptic curves over Q*](https://arxiv.org/abs/2106.11141) Jeremy Rouse, Andrew V. Sutherland, and David Zureick-Brown  (Forum Math. Sigma, 2022).
 
 - `nonisoscript_Gamma1.magma` is the script used to run `isolated_points_from_image_Gamma1.m` on all images in `elladicgens.txt`.
 
